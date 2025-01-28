@@ -1,0 +1,286 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background-color: #f5ecd5;
+    color: black;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    font-size: 30px; /* Preserved size */
+}
+
+.imglogo {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+}
+
+.loginbtn {
+    height: 20px;
+    font-size: 12px;
+    width: 70px;
+    text-align: center;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    background-color: #005bb5;
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 160px; /* Preserved size */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Main Section */
+main {
+    background: url('background1.png') no-repeat center/cover;
+}
+
+.first {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 500px; /* Preserved height */
+    gap: 50px;
+}
+
+.right {
+  
+    margin-left: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px; /* Preserved size */
+    width: 500px; /* Preserved width */
+}
+
+.left {
+
+    margin-left: 100px;
+    font-size: 40px; /* Preserved size */
+    width: 400px; /* Preserved width */
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    left: 25%;
+}
+
+.registerbtn {
+    height: 30px; /* Preserved height */
+    margin-top: 50px;
+    width: 100px; /* Preserved width */
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.registerbtn:hover {
+    background-color: #218838;
+}
+
+/* Overview Section */
+
+
+.overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.master-text {
+    margin-left: 50px;
+}
+
+.over-text {
+    font-size: 30px; /* Preserved size */
+    font-weight: bold;
+}
+
+.pre-info {
+    color: #6b6b6b;
+    font-size: 20px; /* Preserved size */
+    padding: 10px;
+}
+
+#get-started {
+    margin-left: 75%;
+    text-decoration: none;
+    color: rgb(27, 110, 152);
+    font-size: 20px; /* Preserved size */
+}
+.track-img {
+    width: 400px; /* Preserved original size */
+    display: block; /* Ensures it's treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    padding: 20px; /* Adds some spacing around the image */
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+.foot {
+    display: flex;
+    gap: 100px;
+    font-size: 12px; /* Preserved size */
+}
+
+#brand {
+    display: flex;
+    margin-left: 100px;
+    gap: 30px;
+}
+
+.imgbrand {
+    width: 20px; /* Preserved size */
+}
+
+.foot-link {
+    display: flex;
+    list-style: none;
+}
+
+.foot-link li {
+    margin: 0 10px;
+}
+
+.foot-link a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.foot-link a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .track-img
+    {
+        width:50%
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .body
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    .first {
+        flex-direction: column;
+        text-align: center;
+    }
+    #get-started
+    {
+       margin-left: 10%; 
+    }
+    
+    .overview {
+        flex-direction: column;
+        text-align: center;
+    }
+    .right, .left {
+        margin: 20px 0;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .right, .left {
+        font-size: 24px;
+    }
+    
+    .registerbtn {
+        width: 80px;
+        font-size: 16px;
+    }
+
+    .imglogo {
+        width: 20px;
+    }
+    .loginbtn {
+        width: 60px;
+        font-size:10px;}
+ }
